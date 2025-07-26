@@ -1,80 +1,43 @@
 # My_1st_git_Py
-ro_dict = {
-    0: "",
-    1: "",
-    2: "",
-    3: "",
-    4: "",
-    5: "",
-    6: "",
-    7: "",
-    8: "",
-    9: "",
-    10: "",
-    11: "",
-    12: "",
-    13: "",
-    14: "",
-    15: "",
-    16: "",
-    17: "",
-    18: "",
-    19: "",
-    20: "",
-    21: "",
-    22: "",
-    23: "",
-    24: "",
-    25: "",
-    26: "",
-    27: "",
-    28: "",
-    29: "",
-    30: "",
-    31: "",
-    32: "",
-    33: "",
-    34: "",
-    35: "",
-    36: "",
-    37: "",
-    38: "",
-    39: "",
-    40: "",
-    41: "",
-    42: "",
-    43: "",
-    44: "",
-    45: "",
-    46: "",
-    47: "",
-    48: "",
-    49: "",
+ans_dict = {
+      0: 88.4,
+      1: 223.1,
+      2: 65.4
+
+
 }
 
-#주석 처리한 부분: 50문제를 연속해서 풀게 하는 게임 코드를 만들고 싶었으나, 일단 오늘은 여기까지 하고 토익 단어를 외우자 
+pro_dict = {
+    0: "0번 문제 발문",
+    1: "1번 문제 발문",
+    2: "2번 문제 발문"
 
+
+}
+
+#일단 기능 구현은 성공했고, 추후에 좀 더 다듬어 봐야겠다.
 class ProblemSolving:
-     def __init__(self, num, i):
-        self.num = num
-        #self.i = i
-     def True_Or_False(self):
-        #while self.i < 50:
-           print(pro_dict[self.i])#pro_dict라는 첫 key가 0부터 시작하는 딕셔너리 존재 가정
-           num = float(input("정답을 입력하십시오."))
-           if self.num == num:    #self.num은 정답 값, num은 입력 받은 값
-              print("정답입니다! 기억 회복 + 0.3%")
-              #self.i += 1
-           else:
-              print("오답입니다. 다시 도전하십시오.")
-           #if self.i == 50:
-              #print("모든 문제를 푸셨습니다.\n업적달성:100%생과일..아니 데이터 과학자!")
+    
+      
+    def __init__(self):
+        pass
+       
+    def True_Or_False(self):
+        for i in range(0, 3):
+                print(pro_dict[i])#pro_dict라는 첫 key가 0부터 시작하는 딕셔너리 존재 가정
+                ans = float(input("정답을 입력하십시오."))
+                if ans_dict[i] == ans:    #self.num은 정답 값, num은 입력 받은 값
+                    print("정답입니다! 기억 회복 + 0.3%")
+                else:
+                    print("오답입니다. 다시 도전하십시오.")
+                if i == 2:
+                    print("모든 문제를 푸셨습니다.\n업적달성:100%생과일..아니 데이터 과학자!")
+                    break
+
+        
+            
+
+pro_mean = ProblemSolving()
 
 
-
-#평균
-pro_mean = ProblemSolving(num= 88.4, i= 0)  #인스턴스 객체? #이거 쓰고 함수 호출  
-  #정답 값 준비
-
-
-#pro_mean.True_Or_False()
+pro_mean.True_Or_False()
